@@ -129,7 +129,7 @@ CSS
 ...
 
 .menu-list {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 ...

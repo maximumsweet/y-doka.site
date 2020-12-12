@@ -25,7 +25,7 @@ summary:
 
 Поменять можно состояние только один раз: перейти из `pending` либо в `fulfilled,` либо в `rejected`:
 
-![/assets/images/posts/promise/Untitled.png](/assets/images/posts/promise/Untitled.png)
+![Схема трёх состояний промиса и переход между ними](/assets/images/posts/promise/Untitled.png)
 
 У промиса есть методы `then` и `catch`, которые позволяют выполнять код при изменении его состояния.
 
@@ -39,7 +39,7 @@ summary:
 
 Изменить состояние промиса можно, вызвав колбэки, переданные аргументами в функцию:
 
-![/assets/images/posts/promise/Untitled%201.png](/assets/images/posts/promise/Untitled%201.png)
+![2 колбэка Promise функции](/assets/images/posts/promise/Untitled%201.png)
 
 ```jsx
 const promise = new Promise(function (resolve, reject) {
@@ -240,7 +240,7 @@ fetch(`https://swapi.dev/api/films/${id}/`)
 
 <div class="columns"><div class="columns__line"><div class="columns__item">
 
-![/assets/images/posts/promise/Group_1.png](/assets/images/posts/promise/Group_1.png)
+![Один метод catch, поставленный в конце цепочки](/assets/images/posts/promise/Group_1.png)
 
 </div><div class="columns__item">
 
@@ -248,7 +248,7 @@ fetch(`https://swapi.dev/api/films/${id}/`)
 
 </div></div><div class="columns__line"><div class="columns__item">
 
-![/assets/images/posts/promise/Group_2.png](/assets/images/posts/promise/Group_2.png)
+![Несколько методов catch, поставленных в середине и конце цепочки](/assets/images/posts/promise/Group_2.png)
 
 </div><div class="columns__item">
 
@@ -256,7 +256,7 @@ fetch(`https://swapi.dev/api/films/${id}/`)
 
 </div></div><div class="columns__line"><div class="columns__item">
 
-![/assets/images/posts/promise/Group_3.png](/assets/images/posts/promise/Group_3.png)
+![Один метод catch, поставленный в середине цепочки](/assets/images/posts/promise/Group_3.png)
 
 </div><div class="columns__item">
 

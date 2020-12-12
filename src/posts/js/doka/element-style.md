@@ -12,7 +12,7 @@ summary:
 
 [`HTMLElement.style`](http://htmlelement.style) получает и устанавливает инлайновые стили элемента, то есть те, что записываются через атрибут `style`.
 
-С помощью него можно управлять стилем элемента. [Специфичность]() этого свойства такая же, как у атрибута `style`.
+С помощью него можно управлять стилем элемента. [Специфичность](https://developer.mozilla.org/ru/docs/Web/CSS/Specificity) этого свойства такая же, как у атрибута `style`.
 
 ## Как пишется
 
@@ -42,7 +42,7 @@ element.style.color = "blue"
 
 [`HTMLElement.style`](http://htmlelement.style) — это механизм для работы со стилями на элементе. С его помощью можно управлять отображением элементов в «рантайме», то есть во время выполнения скрипта.
 
-Этот механизм позволяет «перетирать» стили, описанные в CSS-таблицах, так как специфичность стилей в атрибуте `style` выше (за иключением стилей с `!important`).
+Этот механизм позволяет «перетирать» стили, описанные в CSS-таблицах, так как специфичность стилей в атрибуте `style` выше (за иcключением стилей с `!important`).
 
 Чтобы указать значение конкретного CSS-свойства, мы можем использовать одноимённое отображение в `style`:
 
@@ -63,79 +63,79 @@ element.style.fontFamily = "Arial"
 <details class="article__table article__table_all-half">
   <summary>CSS-свойства в JS-нотации</summary>
 
-| CSS                       | JavaScript           |
-| ------------------------- | -------------------- |
-| [background]()            | background           |
+| CSS | JavaScript |
+| --- | --- |
+| [background]() | background |
 | [background-attachment]() | backgroundAttachment |
-| [background-color]()      | backgroundColor      |
-| [background-image]()      | backgroundImage      |
-| [background-position]()   | backgroundPosition   |
-| [background-repeat]()     | backgroundRepeat     |
-| [border]()                | border               |
-| [border-bottom]()         | borderBottom         |
-| [border-bottom-color]()   | borderBottomColor    |
-| [border-bottom-style]()   | borderBottomStyle    |
-| [border-bottom-width]()   | borderBottomWidth    |
-| [border-color]()          | borderColor          |
-| [border-left]()           | borderLeft           |
-| [border-left-color]()     | borderLeftColor      |
-| [border-left-style]()     | borderLeftStyle      |
-| [border-left-width]()     | borderLeftWidth      |
-| [border-right]()          | borderRight          |
-| [border-right-color]()    | borderRightColor     |
-| [border-right-style]()    | borderRightStyle     |
-| [border-right-width]()    | borderRightWidth     |
-| [border-style]()          | borderStyle          |
-| [border-top]()            | borderTop            |
-| [border-top-color]()      | borderTopColor       |
-| [border-top-style]()      | borderTopStyle       |
-| [border-top-width]()      | borderTopWidth       |
-| [border-width]()          | borderWidth          |
-| [clear]()                 | clear                |
-| [clip]()                  | clip                 |
-| [color]()                 | color                |
-| [cursor]()                | cursor               |
-| [display]()               | display              |
-| [filter]()                | filter               |
-| [float]()                 | cssFloat             |
-| [font]()                  | font                 |
-| [font-family]()           | fontFamily           |
-| [font-size]()             | fontSize             |
-| [font-variant]()          | fontVariant          |
-| [font-weight]()           | fontWeight           |
-| [height]()                | height               |
-| [left]()                  | left                 |
-| [letter-spacing]()        | letterSpacing        |
-| [line-height]()           | lineHeight           |
-| [list-style]()            | listStyle            |
-| [list-style-image]()      | listStyleImage       |
-| [list-style-position]()   | listStylePosition    |
-| [list-style-type]()       | listStyleType        |
-| [margin]()                | margin               |
-| [margin-bottom]()         | marginBottom         |
-| [margin-left]()           | marginLeft           |
-| [margin-right]()          | marginRight          |
-| [margin-top]()            | marginTop            |
-| [overflow]()              | overflow             |
-| [padding]()               | padding              |
-| [padding-bottom]()        | paddingBottom        |
-| [padding-left]()          | paddingLeft          |
-| [padding-right]()         | paddingRight         |
-| [padding-top]()           | paddingTop           |
-| [page-break-after]()      | pageBreakAfter       |
-| [page-break-before]()     | pageBreakBefore      |
-| [position]()              | position             |
-| [stroke-dasharray]()      | strokeDasharray      |
-| [stroke-dashoffset]()     | strokeDashoffset     |
-| [stroke-width]()          | strokeWidth          |
-| [text-align]()            | textAlign            |
-| [text-decoration]()       | textDecoration       |
-| [text-indent]()           | textIndent           |
-| [text-transform]()        | textTransform        |
-| [top]()                   | top                  |
-| [vertical-align]()        | verticalAlign        |
-| [visibility]()            | visibility           |
-| [width]()                 | width                |
+| [background-color](/posts/css/doka/background-color/) | backgroundColor |
+| [background-image](/posts/css/doka/background-image/) | backgroundImage |
+| [background-position](/posts/css/doka/background-position/) | backgroundPosition |
+| [background-repeat](/posts/css/doka/background-repeat/) | backgroundRepeat |
+| [border](/posts/css/doka/border/) | border |
+| [border-bottom](/posts/css/doka/border/#как-это-понять) | borderBottom |
+| [border-bottom-color](/posts/css/doka/border/#как-это-понять) | borderBottomColor |
+| [border-bottom-style](/posts/css/doka/border/#как-это-понять) | borderBottomStyle |
+| [border-bottom-width](/posts/css/doka/border/#как-это-понять) | borderBottomWidth |
+| [border-color](/posts/css/doka/border/#border-color) | borderColor |
+| [border-left](/posts/css/doka/border/#как-это-понять) | borderLeft |
+| [border-left-color](/posts/css/doka/border/#как-это-понять) | borderLeftColor |
+| [border-left-style](/posts/css/doka/border/#как-это-понять) | borderLeftStyle |
+| [border-left-width](/posts/css/doka/border/#как-это-понять) | borderLeftWidth |
+| [border-right](/posts/css/doka/border/#как-это-понять) | borderRight |
+| [border-right-color](/posts/css/doka/border/#как-это-понять) | borderRightColor |
+| [border-right-style](/posts/css/doka/border/#как-это-понять) | borderRightStyle |
+| [border-right-width](/posts/css/doka/border/#как-это-понять) | borderRightWidth |
+| [border-style](/posts/css/doka/border/#border-style) | borderStyle |
+| [border-top](/posts/css/doka/border/#как-это-понять) | borderTop |
+| [border-top-color](/posts/css/doka/border/#как-это-понять) | borderTopColor |
+| [border-top-style](/posts/css/doka/border/#как-это-понять) | borderTopStyle |
+| [border-top-width](/posts/css/doka/border/#как-это-понять) | borderTopWidth |
+| [border-width](/posts/css/doka/border/#border-width) | borderWidth |
+| [clear]() | clear |
+| [clip]() | clip |
+| [color](/posts/css/doka/color/) | color |
+| [cursor](/posts/css/doka/cursor/) | cursor |
+| [display](/posts/css/doka/display/) | display |
+| [filter]() | filter |
+| [float]() | cssFloat |
+| [font]() | font |
+| [font-family](/posts/css/doka/font-family/) | fontFamily |
+| [font-size](/posts/css/doka/font-size/) | fontSize |
+| [font-variant]() | fontVariant |
+| [font-weight](/posts/css/doka/font-weight/) | fontWeight |
+| [height](/posts/css/doka/height/) | height |
+| [left]() | left |
+| [letter-spacing](/posts/css/doka/letter-spacing/) | letterSpacing |
+| [line-height](/posts/css/doka/line-height/) | lineHeight |
+| [list-style]() | listStyle |
+| [list-style-image](/posts/css/doka/list-style-image/) | listStyleImage |
+| [list-style-position](/posts/css/doka/list-style-position/) | listStylePosition |
+| [list-style-type](/posts/css/doka/list-style-type/) | listStyleType |
+| [margin](/posts/css/doka/margin/) | margin |
+| [margin-bottom](/posts/css/doka/margin/#кратко) | marginBottom |
+| [margin-left](/posts/css/doka/margin/#кратко) | marginLeft |
+| [margin-right](/posts/css/doka/margin/#кратко) | marginRight |
+| [margin-top](/posts/css/doka/margin/#кратко) | marginTop |
+| [overflow]() | overflow |
+| [padding](/posts/css/doka/padding/) | padding |
+| [padding-bottom](/posts/css/doka/padding/#кратко) | paddingBottom |
+| [padding-left](/posts/css/doka/padding/#кратко) | paddingLeft |
+| [padding-right](/posts/css/doka/padding/#кратко) | paddingRight |
+| [padding-top](/posts/css/doka/padding/#кратко) | paddingTop |
+| [page-break-after]() | pageBreakAfter |
+| [page-break-before]() | pageBreakBefore |
+| [position]() | position |
+| [stroke-dasharray]() | strokeDasharray |
+| [stroke-dashoffset]() | strokeDashoffset |
+| [stroke-width]() | strokeWidth |
+| [text-align](/posts/css/doka/text-align/) | textAlign |
+| [text-decoration](/posts/css/doka/text-decoration/) | textDecoration |
+| [text-indent]() | textIndent |
+| [text-transform](/posts/css/doka/text-transform/) | textTransform |
+| [top]() | top |
+| [vertical-align](/posts/css/doka/vertical-align/) | verticalAlign |
+| [visibility](/posts/css/doka/visibility/) | visibility |
+| [width](/posts/css/doka/width/) | width |
 
 </details>
 

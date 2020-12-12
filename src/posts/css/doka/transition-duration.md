@@ -51,7 +51,7 @@ transition-duration: unset;
 .box {
   transition-property: color, font-size;
                         |       |
-	transition-duration: .3s,    .5s;
+  transition-duration: .3s,    .5s;
 }
 ```
 
@@ -63,14 +63,14 @@ transition-duration: unset;
 .box {
   transition-property: color, font-size;
                         |       |
-	transition-duration: .3s,    .5s, 1s, 2s;
+  transition-duration: .3s,    .5s, 1s, 2s;
 }
 
 /* Времён меньше. Список повторяется с начала */
 .box {
   transition-property: color, font-size, padding, transform;
                         |       |           |         |
-	transition-duration: .3s,    .5s;     /* .3s       .5s */
+  transition-duration: .3s,    .5s;     /* .3s       .5s */
 }
 ```
 

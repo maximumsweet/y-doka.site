@@ -103,15 +103,15 @@ const transformed = nums.map(function (num, i) {
 
 ```jsx
 function SomeComponent() {
-	...
+  ...
 
-	const items = ['This', 'is', 'map!']
+  const items = ['This', 'is', 'map!']
 
-	return (
-		<div>
-			{items.map(item => <span>{item}</span>)}
-		</div>
-	)
+  return (
+    <div>
+      {items.map(item => <span>{item}</span>)}
+    </div>
+  )
 }
 ```
 

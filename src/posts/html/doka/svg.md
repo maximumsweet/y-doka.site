@@ -4,7 +4,7 @@ name: svg
 author: ABatickaya
 co-authors:
 designers:
-contributors:
+contributors: skorobaeus
 summary:
   - свг
   - векторная графика
@@ -25,11 +25,11 @@ SVG — векторный формат графики, доступный в в
 
 Для сравнения посмотрим на PNG и SVG версии одного и того же изображения:
 
-![/assets/images/posts/svg/iconmonstr-menu-dot-horizontal-thin-48.png](/assets/images/posts/svg/iconmonstr-menu-dot-horizontal-thin-48.png)
+<img src="/assets/images/posts/svg/iconmonstr-menu-dot-horizontal-thin-48.png" alt="Увеличенное в масштабе png-изображение" width="300"/>
 
 Увеличенное в масштабе png-изображение
 
-![/assets/images/posts/svg/iconmonstr-menu-dot-horizontal-thin.svg](/assets/images/posts/svg/iconmonstr-menu-dot-horizontal-thin.svg)
+<img src="/assets/images/posts/svg/iconmonstr-menu-dot-horizontal-thin.svg" alt="Увеличенное в масштабе svg-изображение" width="300"/>
 
 Увеличенное в масштабе svg-изображение
 
@@ -46,9 +46,9 @@ SVG — векторный формат графики, доступный в в
 >
   <path
     d="M16 12a3.001 3.001 0 016 0 3.001 3.001 0 01-6 0zm1 0a2 2 0
-					 114.001.001A2 2 0 0117 12zm-8 0a3.001 3.001 0 016 0 3.001 3.001 0
-					 01-6 0zm1 0a2 2 0 114.001.001A2 2 0 0110 12zm-8 0a3.001 3.001 0 016
-					 0 3.001 3.001 0 01-6 0zm1 0a2 2 0 114.001.001A2 2 0 013 12z"
+      114.001.001A2 2 0 0117 12zm-8 0a3.001 3.001 0 016 0 3.001 3.001 0
+      01-6 0zm1 0a2 2 0 114.001.001A2 2 0 0110 12zm-8 0a3.001 3.001 0 016
+      0 3.001 3.001 0 01-6 0zm1 0a2 2 0 114.001.001A2 2 0 013 12z"
   />
 </svg>
 ```
@@ -135,9 +135,9 @@ SVG не может быть записано без оборачивающег�
   >
     <path
       d="M16 12a3.001 3.001 0 016 0 3.001 3.001 0 01-6 0zm1 0a2 2 0
-						 114.001.001A2 2 0 0117 12zm-8 0a3.001 3.001 0 016 0 3.001 3.001 0
-						 01-6 0zm1 0a2 2 0 114.001.001A2 2 0 0110 12zm-8 0a3.001 3.001 0 016
-						 0 3.001 3.001 0 01-6 0zm1 0a2 2 0 114.001.001A2 2 0 013 12z"
+        114.001.001A2 2 0 0117 12zm-8 0a3.001 3.001 0 016 0 3.001 3.001 0
+        01-6 0zm1 0a2 2 0 114.001.001A2 2 0 0110 12zm-8 0a3.001 3.001 0 016
+        0 3.001 3.001 0 01-6 0zm1 0a2 2 0 114.001.001A2 2 0 013 12z"
     />
   </svg>
 </div>
@@ -160,12 +160,7 @@ SVG не может быть записано без оборачивающег�
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="solarrust" data-slug-hash="yLJeqwQ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="SVG">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/yLJeqwQ">
-  SVG</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+{% demo "/svg/", "Анимация SVG", 360 %}
 
 Неприятная особенность: если одна и та же SVG-картинка используется в нескольких местах на сайте, и в какой-то момент вы захотите в ней что-то изменить, то нужно будет найти все вставки и вносить исправления в код. При вставке SVG при помощи `<img>` или `background-image` достаточно будет внести изменения в svg-файл и правки применяться ко всем картинкам.
 

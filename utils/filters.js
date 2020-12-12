@@ -19,4 +19,16 @@ module.exports = {
     }
     return chars.join("")
   },
+
+  filterPeople: function (contributorsList, filterList) {
+    return contributorsList
+      .filter((contributor) => {
+        const filterListNormalized = [].concat(filterList)
+
+        return filterListNormalized.includes(contributor.fileSlug)
+      })
+      .map((contributor) => {
+        return contributor.data
+      })
+  },
 }

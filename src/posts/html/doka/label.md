@@ -48,16 +48,15 @@ summary:
 ```html
 <form action="">
   <label for="phone">Ваш телефон:</label>
-  <input type="tel" name="phone" id="phone" class="input" />
+  <input type="tel" name="phone" id="phone" />
 
   <label>
-    <input type="checkbox" name="agree" class="checkbox" />Согласен на обработку
-    данных
+    <input type="checkbox" name="agree" />Согласен на обработку данных
   </label>
 </form>
 ```
 
-{% demo "/label/", "Див с фоном", 320 %}
+{% demo "/label/", "Два способа связать label и input", 270 %}
 
 ## Атрибуты
 

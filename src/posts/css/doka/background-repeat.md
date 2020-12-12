@@ -43,8 +43,8 @@ CSS
 
 ```css
 .element {
-	...
-	background-repeat: repeat-x;
+  ...
+  background-repeat: repeat-x;
 }
 ```
 

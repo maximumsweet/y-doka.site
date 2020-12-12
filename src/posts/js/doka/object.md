@@ -90,7 +90,7 @@ comment.text = "Комментарий пользователя"
 
 ```jsx
 let cat = {
-	born data: '15-04-2015',
+  born data: '15-04-2015',
 };
 ```
 

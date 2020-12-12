@@ -60,15 +60,15 @@ summary:
 
 ```css
 .block {
-	width: 50%; /* Ограничим ширину до половины окна */
-	background-color: #add8e6;
+  width: 50%; /* Ограничим ширину до половины окна */
+  background-color: #add8e6;
 }
 
 .inline-block {
-	width: 100% /* Сделаем каждый элемент на всю ширину окна */
-	display: inline-block;
-	border: 1px solid gray;
-	background-color: #90ee90;
+  width: 100%; /* Сделаем каждый элемент на всю ширину окна */
+  display: inline-block;
+  border: 1px solid gray;
+  background-color: #90ee90;
 }
 ```
 
@@ -142,10 +142,10 @@ selector {
 ...
 
 .card__icon {
-	display: inline-block;
-	width: 56px;
-	height: 56px;
-	background: url('https://yastatic.net/morda-logo/i/services/1/mail.svg') no-repeat center / cover;
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  background: url('https://yastatic.net/morda-logo/i/services/1/mail.svg') no-repeat center / cover;
 }
 
 ...
@@ -161,7 +161,7 @@ selector {
 
 **Пример макета:**
 
-![/assets/images/posts/width/width.png](/assets/images/posts/width/width.png)
+![Пример макета](/assets/images/posts/width/width.png)
 
 **Как не надо делать:**
 
@@ -189,8 +189,8 @@ selector {
 ```css
 ...
 .card__text {
-	max-width: 65%;
-	margin: 0 auto; /* Для выравнивания по центру */
+  max-width: 65%;
+  margin: 0 auto; /* Для выравнивания по центру */
 }
 ...
 ```

@@ -5,7 +5,9 @@ author: grachev
 co-authors:
   - ABatickaya
 designers:
-contributors: skorobaeus
+contributors:
+  - ABatickaya
+  - grachev
 summary:
   - ссылка
   - <a>
@@ -30,7 +32,7 @@ summary:
 
 Размести текст, картинку или другой элемент внутри тега `<a>`, чтобы сделать его ссылкой. Ссылка может вести на любую страницу, файл, email или телефон. Для этого пропиши обязательный атрибут `href="URL"`, где URL — любой адрес.
 
-![/assets/images/posts/a/02-06-scheme-rus_1.png](/assets/images/posts/a/02-06-scheme-rus_1.png)
+![Пример использования тега a с атрибутом и его значением](/assets/images/posts/a/02-06-scheme-rus_1.png)
 
 Бывает, что ссылка ведёт не на другую страницу, а на раздел внутри текущей страницы. Тогда такая ссылка называется якорной или просто «якорь». Чтобы её создать, вместо URL укажи идентификатор `#id` элемента, к которому должна вести ссылка. Например, `<a href="#glava1">Глава 1</a>`. Идентификатор можно задать для любого тега, то есть «бросить якорь» в любую часть страницы.
 
@@ -80,10 +82,7 @@ summary:
 
 ```html
 <a href="https://y-doka.site/" target="_blank">
-  <img
-    src="https://y-doka.site/assets/images/posts/a/dogs.png"
-    alt="doka mainpage dog"
-  />
+  <img src="dogs.png" alt="doka mainpage dog" />
 </a>
 ```
 

@@ -17,7 +17,7 @@ summary:
 
 Раньше интерактив можно было реализовать только при помощи JS, что сильно усложняло жизнь верстальщикам. Но сегодня у нас существует отличный помощник — псевдокласс `:hover`.
 
-![/assets/images/posts/hover/hover-gif.gif](/assets/images/posts/hover/hover-gif.gif)
+![Пример псевдокласса hover](/assets/images/posts/hover/hover-gif.gif)
 
 ## Пример
 
