@@ -27,7 +27,7 @@ summary:
       <div class="paragraph subtitle">Div с классом paragraph и subtitle</div>
     </div>
     <p class="paragraph">Параграф с классом paragraph</p>
-    <script type="text/javascript">
+    <script>
       let paragraphs = document.getElementsByClassName("paragraph")
       console.log(paragraphs.length) // напечатает 2, так как поиск ведется по всей странице
 

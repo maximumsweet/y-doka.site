@@ -42,7 +42,7 @@ summary:
       </p>
     </div>
     <p>Это параграф, дочерний для body</p>
-    <script type="text/javascript">
+    <script>
       let paragraphs = document.querySelectorAll("div>p")
       console.log(paragraphs.length) // 2
 

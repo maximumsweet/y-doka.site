@@ -19,7 +19,7 @@ summary:
   <head></head>
   <body>
     <h1 id="title">Привет, незнакомец!</h1>
-    <script type="text/javascript">
+    <script>
       let title = document.getElementById("title")
       console.log(title.textContent) // напечатает "Привет, незнакомец!"
     </script>

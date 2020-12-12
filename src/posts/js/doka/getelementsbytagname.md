@@ -25,7 +25,7 @@ summary:
       <p>Это параграф дочерний и для div, и для body</p>
     </div>
     <p>Это параграф, дочерний для body</p>
-    <script type="text/javascript">
+    <script>
       let pFromBody = document.getElementsByTagName("p")
       console.log(pFromBody.length) // напечатает 2, так как поиск ведется по всей странице
 
