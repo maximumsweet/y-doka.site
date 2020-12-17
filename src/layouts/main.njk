@@ -13,6 +13,15 @@
 <body class="mainpage">
   {% include "header/mainpage-header.njk" %}
   {{ content | safe }}
+  <div class="mainpage__mascot">
+    <picture>
+      <source srcset="/assets/images/mainpage/mascot-doka.svg" type="image/svg+xml">
+      <img
+        alt="Пёс Дока"
+        src="/assets/images/mainpage/mascot-doka.png"
+        class="mainpage__mascot-image" />
+    </picture>
+  </div>
   {% include "footer/mainpage-footer.njk" %}
   <script src="{{ 'assets/scripts/main.js' | url }}"></script>
 </body>
