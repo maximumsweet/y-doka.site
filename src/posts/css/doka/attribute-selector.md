@@ -1,5 +1,5 @@
 ---
-title: Селектор по атрибуту (div[attr=""] {})
+title: '[attr]'
 name: attribute-selector
 author: ezhkov_d
 co-authors:
