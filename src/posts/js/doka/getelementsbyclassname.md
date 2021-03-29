@@ -1,5 +1,5 @@
 ---
-title: "getElementsByClassName(');"
+title: "getElementsByClassName()"
 name: getelementsbyclassname
 author: N_Lopin
 co-authors:

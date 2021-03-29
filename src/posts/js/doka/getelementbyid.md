@@ -1,5 +1,5 @@
 ---
-title: "getElementById(');"
+title: "getElementById()"
 name: getelementbyid
 author: N_Lopin
 co-authors:

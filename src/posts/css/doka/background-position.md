@@ -4,7 +4,7 @@ name: background-position
 author: ABatickaya
 co-authors:
 designers:
-contributors:
+contributors: skorobaeus
 summary:
   - background-position
 ---
@@ -27,18 +27,13 @@ CSS
 
 ```css
 .element {
-  height: 100vh;
-  background-color: #a91517;
-  background-image: url("https://l.imgt.es/resource-preview-imgs/1d9806ec-7ef9-49ea-b60c-f1c9ca956b0a%2Fbaymax.crop_316x237_0%252C26.preview.png?profile=max500x190");
+  background-color: #49a16c;
+  background-image: url("doggo.png");
   background-repeat: no-repeat;
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="solarrust" data-slug-hash="Ygrypa" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Ygrypa">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/Ygrypa">
-  Ygrypa</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+{% demo "/background-position/not-positioned", "Положение фоновой картинки", 450 %}
 
 Как видно в примере, маленькая картинка с персонажем располагается в левом верхнем углу. Но по логике изображения нам нужно расположить его в правом нижнем углу.
 
@@ -52,12 +47,7 @@ CSS
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="solarrust" data-slug-hash="eXGpjg" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="eXGpjg">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/eXGpjg">
-  eXGpjg</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+{% demo "/background-position/positioned", "Положение фоновой картинки", 450 %}
 
 ## Как это понять
 
@@ -101,15 +91,15 @@ CSS
 
 # Подсказки
 
-💡Свойство положения фона не наследуется.
+💡 Свойство положения фона не наследуется.
 
-💡Значение по умолчанию — 0% 0% (левый верхний угол)
+💡 Значение по умолчанию — 0% 0% (левый верхний угол)
 
-💡Если указано только одно значение в процентах, то второе подставляется автоматически и равняется 50%. То есть значение `100%` расположит картинку по центру левого края.
+💡 Если указано только одно значение в процентах, то второе подставляется автоматически и равняется 50%. То есть значение `100%` расположит картинку по центру левого края.
 
-💡Если картинка занимает всё пространство блока, то `background-position` не возымеет никакого действия. Но его принято указывать чтобы в случае замены картинки новое изображение располагалось по центру блока.
+💡 Если картинка занимает всё пространство блока, то `background-position` не возымеет никакого действия. Но его принято указывать чтобы в случае замены картинки новое изображение располагалось по центру блока.
 
-💡Изменение положения фона можно анимировать при помощи свойства `transition` 🥳
+💡 Изменение положения фона можно анимировать при помощи свойства `transition` 🥳
 
 ## В работе
 

@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Menlo";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: local("Menlo"), local("Menlo-Regular"),
+    url("/assets/fonts/menlo/regular.woff2") format("woff2")
+      url("/assets/fonts/menlo/regular.woff") format("woff");
+}

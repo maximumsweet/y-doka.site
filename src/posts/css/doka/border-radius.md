@@ -2,9 +2,9 @@
 title: "border-radius"
 name: border-radius
 author: ABatickaya
-co-authors:
-designers:
-contributors:
+contributors: skorobaeus
+tags:
+  - sprint-4
 summary:
   - border-radius
 ---
@@ -13,7 +13,7 @@ summary:
 
 Свойство `border-radius` закругляет углы почти у любого элемента. И даже если у блока не задана явная рамка.
 
-🔮Волшебное свойство! Часто нужно в работе, поскольку дизайнеры не любят острые углы.
+🔮 Волшебное свойство! Часто нужно в работе, поскольку дизайнеры не любят острые углы.
 
 ## Пример
 
@@ -34,27 +34,32 @@ CSS
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="solarrust" data-slug-hash="oNbbaEK" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="oNbbaEK">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/oNbbaEK">
-  oNbbaEK</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+{% demo "/border-radius/basic", "Кнопка", 140 %}
 
 Обрати внимание, что мы _сбросили_ стандартную рамку кнопки, но углы тем не менее слегка закруглились.
 
-Если добавить кнопке тень и интересную реакцию на наведение курсора и нажатие, то получится привлекательно и современно 😉
+Если при нажатии добавлять кнопке внутреннюю тень такого же цвета, что и фон, она будет "нажиматься" — получится привлекательно и современно 😉
 
-<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="solarrust" data-slug-hash="ROZeQE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="ROZeQE">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/ROZeQE">
-  ROZeQE</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+```css
+body {
+  background-color: #e6e6e6;
+}
+
+.btn:focus {
+  box-shadow: inset 0px 0 0px 3px #e6e6e6;
+  transition: all 0.2s;
+}
+```
+
+{% demo "/border-radius/interactive", "Интерактивная кнопка", 140 %}
 
 ## Как это понять
 
 Слово **border** переводится с английского как рамка. А со словом **radius** каждый знаком ещё со школьной скамьи 😏
 
 Свойство `border-radius` задаёт радиус закругления каждого из углов элемента.
+
+Если значение задано в процентах, то оно будет высчитываться от размеров элемента: горизонтальные размеры будут высчитываться от ширины элемента, а вертикальные — соответственно, от высоты (поэтому для квадратного элемента можно задать `border-radius: 50%`, чтобы сделать его круглым).
 
 ## Как пишется
 
@@ -68,11 +73,35 @@ selector {
 }
 ```
 
-Можно управлять степенью закругления каждого из углов в отдельности или задать одно значение для всех углов сразу.
+Можно управлять степенью закругления каждого из углов в отдельности или задать одно значение для всех углов сразу. Причём значение на самом деле состоит из двух — скругления по горизонтальной оси и по вертикальной. Чтобы явно задать скругление для каждой из осей (т. е. получить не круглое значение, а элипсоидное), это значение следует записывать через символ `/`:
+
+```css
+.ellipse {
+  border-radius: 5em / 50%;
+}
+```
+
+Такая запись совсем не означает, что наше скругление будет равно результату деления 5em на какой-то размер, а эквивалентна такой записи:
+
+```css
+.ellipse {
+  border-top-left-radius: 5em 50%;
+  border-top-right-radius: 5em 50%;
+  border-bottom-right-radius: 5em 50%;
+  border-bottom-left-radius: 5em 50%;
+}
+```
+
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="Realetive" data-slug-hash="ExNxgvX" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="border-radius">
+  <span>See the Pen <a href="https://codepen.io/Realetive/pen/ExNxgvX">
+  border-radius</a> by Roman Ganin (<a href="https://codepen.io/Realetive">@Realetive</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ## Подсказки
 
-💡 Значение по умолчанию: `0`
+💡 Значение по умолчанию: `0`.
 
 💡 `border-radius` сработает даже если не будет задана видимая рамка.
 
@@ -89,31 +118,42 @@ selector {
 
 {% include "authors/ABatickaya/in-work.njk" %}
 
-🛠Самый крутой лайфхак — это круглые элементы при помощи `border-radius`. Они часто нужны для всяких лейблов на странице.
+🛠 Самый крутой лайфхак — это круглые элементы при помощи `border-radius`. Они часто нужны для всяких лейблов на странице.
 
 HTML
 
 ```html
-<div class="text" data-msg="3">Сообщения</div>
+<button class="icon" data-notifications="3"></button>
 ```
 
 CSS
 
 ```css
-.text:after {
-  content: attr(data-msg);
-  width: 20px; /* равные ширина */
-  height: 20px; /* и высота */
+.icon {
+  background-image: url(eyes.png);
+}
+
+.icon:after {
+  content: attr(data-notifications);
+  width: 25px; /* равные ширина */
+  height: 25px; /* и высота */
   border-radius: 50%; /* закругляем углы на 50% */
-  background-color: red;
+  color: #ffffff;
+  background-color: #ed4242;
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="solarrust" data-slug-hash="bJrQrq" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="bJrQrq">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/bJrQrq">
-  bJrQrq</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
+{% demo "/border-radius/notification", "Счётчик уведомлений", 135 %}
+
+{% include "authors/Roman_Ganin/in-work.njk" %}
+
+🛠 Если вы не уверены, что блок всегда будет квадратным, то для подстраховки можно указывать закругление в абсолютных единицах.  Причём указать значение, бо́льшее чем максимальная ширина и высота блока. Например, `border-radius: 9999px`. Если в этой ситуации указывать закругление в процентах, то значение будет считаться от ширины и высоты. Что приведёт к вытягиванию блока в _яйцо_:
+
+<p class="codepen" data-height="588" data-theme-id="light" data-default-tab="result" data-user="Realetive" data-slug-hash="yLaXjqp" data-preview="true" style="height: 588px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="border-radius">
+  <span>See the Pen <a href="https://codepen.io/Realetive/pen/yLaXjqp">
+  border-radius</a> by Roman Ganin (<a href="https://codepen.io/Realetive">@Realetive</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 {% include "authors/ABatickaya/author.njk" %}

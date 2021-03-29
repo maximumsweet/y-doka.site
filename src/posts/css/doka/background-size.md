@@ -4,7 +4,7 @@ name: background-size
 author: ABatickaya
 co-authors:
 designers:
-contributors:
+contributors: skorobaeus
 summary:
   - background-size
 ---
@@ -17,7 +17,7 @@ summary:
 
 Создадим блок и в качестве фона зададим ему красивую панораму:
 
-![Фон с красивой панорамой](/assets/images/posts/background-size/151249.jpg)
+![Фон с красивой панорамой](/assets/images/posts/background-size/landscape.jpg)
 
 HTML
 
@@ -31,36 +31,25 @@ CSS
 .element {
   height: 100vh;
   background-color: #f1f1f1;
-  background-image: url(https://wallpaperplay.com/walls/full/b/4/9/151249.jpg);
+  background-image: url("landscape.jpg");
   background-repeat: no-repeat;
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="solarrust" data-slug-hash="EMLewa" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="EMLewa">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/EMLewa">
-  EMLewa</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+
+{% demo "/background-size/fullsize", "Фон без управления размером", 300 %}
 
 Если не указывать свойство `background-size` то будет видна только небольшая часть картинки. Но хотелось бы, чтобы фон, несмотря на его нестандартный размер, смотрелся хорошо.
 
 Укажем свойство `background-size` со значением `100% 100%`. По логике с таким значением фон должен занимать 100% высоты элемента и 100% ширины элемента.
 
-<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="solarrust" data-slug-hash="VRxGQp" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="VRxGQp">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/VRxGQp">
-  VRxGQp</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+{% demo "/background-size/100-100", "Фон с размером 100% 100%", 300 %}
 
 Если у тебя широкий монитор, то можно не заметить подвоха, но на узких мониторах картинка будет деформироваться и сплющиваться по ширине.
 
 Есть способ заставить картинку занять всю доступную площадь и при этом не деформироваться. Зададим `background-size: cover` — cover переводится с английского как обложка.
 
-<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="solarrust" data-slug-hash="RdyYML" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="RdyYML">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/RdyYML">
-  RdyYML</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+{% demo "/background-size/cover", "Фон с параметром cover", 300 %}
 
 В этой версии добавлено ещё свойство `background-position` со значением `center` чтобы в области видимости был центр изображения.
 
@@ -90,21 +79,21 @@ CSS
 
 ## Подсказки
 
-💡Значение по умолчанию `auto`
+💡 Значение по умолчанию `auto`
 
-💡Значение свойства не наследуется
+💡 Значение свойства не наследуется
 
-💡Чаще всего используется значение `cover`. Второе по популярности значение — `contain`. Также часто можно увидеть значение `100% 100%`, но с ним следует быть аккуратным. Точные размеры фона указываются крайне редко. Не принято оставлять значение по умолчанию.
+💡 Чаще всего используется значение `cover`. Второе по популярности значение — `contain`. Также часто можно увидеть значение `100% 100%`, но с ним следует быть аккуратным. Точные размеры фона указываются крайне редко. Не принято оставлять значение по умолчанию.
 
-💡Свойство размера фона можно анимировать при помощи свойства `transition` 🥳
+💡 Свойство размера фона можно анимировать при помощи свойства `transition` 🥳
 
 ## В работе
 
 {% include "authors/ABatickaya/in-work.njk" %}
 
-🛠Если для задания фона используется шорткат `background`, то значение для `background-size` указывается последним, после слэша `/`. Пример: `background: url('example.jpg') no-repeat center / **cover**`
+🛠 Если для задания фона используется шорткат `background`, то значение для `background-size` указывается последним, после слэша `/`. Пример: `background: url('example.jpg') no-repeat center / **cover**`
 
-🛠Свойство `background-size` очень пригодится, если хочется сделать фон с повторяющимся элементом. Так называемым паттерном.
+🛠 Свойство `background-size` очень пригодится, если хочется сделать фон с повторяющимся элементом. Так называемым паттерном.
 
 HTML
 
@@ -119,18 +108,13 @@ CSS
   height: 100vh;
   background-color: #f1f1f1; /* Фоновый цвет */
   /* Маленькая фоновая картинка */
-  background-image: url("https://www.transparenttextures.com/patterns/bo-play.png");
+  background-image: url("pattern.svg");
   /* Нет background-repeat, а значит картинка будет повторяться по горизонтали и вертикали*/
-  background-size: 20px auto; /* Размер картинки 20 пикселей по ширину и auto по высоте */
+  background-size: 40px auto; /* Размер картинки 40 пикселей по ширину и auto по высоте */
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="solarrust" data-slug-hash="YgLJeO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="YgLJeO">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/YgLJeO">
-  YgLJeO</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+{% demo "/background-size/pattern", "Паттерн на фоне", 300 %}
 
 Попробуй поменять размеры фоновой картинки и посмотреть, как будет меняться фоновый паттерн.
 

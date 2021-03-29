@@ -5,6 +5,8 @@ author: bespoyasov
 co-authors:
 designers:
 contributors:
+tags:
+  - sprint-14
 summary:
   - click jacking
   - xss
@@ -178,7 +180,7 @@ _Хранимый (stored) XSS_ — это вредоносный код, кот
 
 Например:
 
-```jsx
+```js
 Content-Security-Policy: default-src 'self' *.trusted.com
 // Значит, что мы разрешаем получать контент со своего домена
 // и всех своих поддоменов, а также от домена trusted.com
@@ -193,7 +195,7 @@ Content-Security-Policy: default-src 'self' *.trusted.com
 
 Одна из разновидностей хранимого XSS — это _key logger_. Представим, что в прошлый раз злоумышленники оставили не `alert()`, а программу, которая отправляет куда-то всё, что вы набираете на клавиатуре.
 
-```jsx
+```js
 document.body.addEventListener("keypress", (e) => {
   // ...Злоумышленники собираются все данные о пользователе,
   // которые им нужны: логин, время события, что угодно.
@@ -238,13 +240,13 @@ _Межсайтовая подделка запроса (Cross-Site Request Forg
 
 В первую очередь куки следует выставлять так, чтобы они были видны лишь для сервиса, который их выставил. Для этого можно использовать `SameSite Cookie`:
 
-```jsx
+```js
 Set-Cookie: key=value; SameSite=Strict
 ```
 
 Также, если с куками не должны работать клиентские скрипты, их можно спрятать:
 
-```jsx
+```js
 Set-Cookie: key=value; HttpOnly
 ```
 
@@ -258,7 +260,7 @@ Set-Cookie: key=value; HttpOnly
         или даже с конкретным запросом для каждого пользователя.
         Злоумышленнику незивестно, по какому принципу токен был сгенерирован,
         поэтому и подделать его у него гораздо меньше шансов. -->
-  <input type="hidden" name="CSRF" value="token-generated-by-server" />
+  <input type="hidden" name="CSRF" value="token-generated-by-server">
 
   <!-- ...Остальная форма -->
 </form>

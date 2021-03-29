@@ -4,7 +4,7 @@ name: background-repeat
 author: ABatickaya
 co-authors:
 designers:
-contributors:
+contributors: skorobaeus
 summary:
   - background-repeat
 ---
@@ -26,16 +26,12 @@ CSS
 ```css
 .element {
   height: 100vh;
-  background-image: url(https://images.homedepot-static.com/productImages/3e6f74e5-e705-4f37-b2ce-e2db91463d70/svn/york-wallcoverings-wallpaper-dy0208-64_1000.jpg);
+  background-image: url(pattern.png);
   background-size: 64px auto; /* Размер изображения */
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="solarrust" data-slug-hash="JzveNw" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="JzveNw">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/JzveNw">
-  JzveNw</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+{% demo "/background-repeat/repeat", "Повтор по x и y", 170 %}
 
 Получился красивый паттерн. Изображение повторяется по горизонтали и по вертикали.
 
@@ -48,11 +44,7 @@ CSS
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="solarrust" data-slug-hash="VRxVWo" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="VRxVWo">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/VRxVWo">
-  VRxVWo</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+{% demo "/background-repeat/repeat-x", "Повтор по x", 170 %}
 
 Теперь картинка повторяется только горизонтали. Аналогично можно повторить картинку по вертикали при помощи значения `repeat-y`.
 
@@ -77,13 +69,13 @@ CSS
 
 ## Подсказки
 
-💡Свойство не наследуется.
+💡 Свойство не наследуется.
 
-💡Значение по умолчанию `repeat`.
+💡 Значение по умолчанию `repeat`.
 
-💡Чаще всего для _полноэкранных_ фонов указывается значение `no-repeat`.
+💡 Чаще всего для _полноэкранных_ фонов указывается значение `no-repeat`.
 
-💡Свойство `background-repeat` нельзя анимировать 😒
+💡 Свойство `background-repeat` нельзя анимировать 😒
 
 ## В работе
 
@@ -91,11 +83,11 @@ CSS
 
 `background-repeat` — свойство простое. Написано повторять — повторяем фон. Написано не повторять — не повторяем.
 
-🛠Чаще всего в работе встречается значение свойства `background-repeat: no-repeat`.
+🛠 Чаще всего в работе встречается значение свойства `background-repeat: no-repeat`.
 
-🛠Повторение фона может пригодиться, если создаётся паттерн в качестве фона как в [примере]().
+🛠 Повторение фона может пригодиться, если создаётся паттерн в качестве фона как в [примере]().
 
-🛠С помощью повторения фона и линейного градиента (`linear-gradient`) можно создавать полосатые фоны.
+🛠 С помощью повторения фона и линейного градиента (`linear-gradient`) можно создавать полосатые фоны.
 
 HTML
 
@@ -109,19 +101,15 @@ CSS
 .element {
   height: 100vh;
   background-image: linear-gradient(
-    #f1f1f1 50px,
-    black 0
+    #49a16c 50px,
+    #064236 0
   ); /* Линейный градиент */
-  background-size: auto 100px; /* Размер фона: 50 пикселей серая полоска + 50 пикселей чёрная полоска */
+  background-size: auto 100px; /* Размер фона: 50 пикселей серая полоска
+                                + 50 пикселей чёрная полоска */
   background-repeat: repeat-y; /* Повторяем фон по вертикали */
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="solarrust" data-slug-hash="QorzvV" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="QorzvV">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/QorzvV">
-  QorzvV</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+{% demo "/background-repeat/gradient", "Паттерн градиентом", 250 %}
 
 {% include "authors/ABatickaya/author.njk" %}

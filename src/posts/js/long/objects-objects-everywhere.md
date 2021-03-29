@@ -5,6 +5,8 @@ author: windrushfarer
 co-authors:
 designers:
 contributors:
+tags:
+  - sprint-4
 summary:
   - array
   - массивы

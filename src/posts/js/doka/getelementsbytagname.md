@@ -1,5 +1,5 @@
 ---
-title: "getElementsByTagName(');"
+title: "getElementsByTagName()"
 name: getelementsbytagname
 author: N_Lopin
 co-authors:

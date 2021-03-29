@@ -1,13 +1,15 @@
 <footer class="footer">
   <div class="footer__inner">
     <nav class="footer__support">
+      {% if permalink !== '/about/' %}
+        <p>
+          <a href="/about" class="footer__link">О проекте</a>
+        </p>
+      {% endif %}
       <p>
-        <a href="/about" class="mainpage__footer-link">О проекте</a>
-      </p>
       <p>
-        Присоединись к нам <a href="https://github.com/Y-Doka/y-doka.site" target="_blank" rel="noopener noreferrer" class="mainpage__support-link">на GitHub</a>
+        Присоединись к нам <a href="https://github.com/Y-Doka/y-doka.site" target="_blank" rel="noopener noreferrer" class="footer__git">на GitHub</a>
       </p>
     </nav>
-    {% include "../ui/aside-arrow.njk" %}
   </div>
 </footer>

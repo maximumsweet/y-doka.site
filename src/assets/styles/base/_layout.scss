@@ -12,6 +12,25 @@
     flex: none;
   }
 
+  &__header {
+    padding-top: 37px;
+    padding-left: 30px;
+
+    .header {
+      padding: 0;
+    }
+
+    .logo {
+      display: inline-block;
+      height: 30px;
+    }
+  }
+
+  &__footer {
+    font-size: 12px;
+    padding: 20px 23px 15px 37px;
+  }
+
   & .main {
     width: auto;
     display: flex;
@@ -33,7 +52,7 @@
       visibility: hidden;
     }
 
-    @media screen and (max-width: 769px) {
+    @media (max-width: 769px) {
       position: relative;
       top: 0;
       left: 0;
@@ -48,7 +67,7 @@
     max-width: $container-max-width;
     transition: all 0.2s ease-in;
 
-    @media screen and (max-width: 769px) {
+    @media (max-width: 769px) {
       width: 100%;
     }
   }
@@ -66,26 +85,6 @@
       .container {
         padding: 0 20px;
       }
-    }
-  }
-
-  .layout {
-    &__header {
-      padding-top: 37px;
-      padding-left: 30px;
-
-      .header {
-        padding: 0;
-      }
-
-      .logo {
-        display: inline-block;
-        height: 30px;
-      }
-    }
-
-    &__footer {
-      display: none;
     }
   }
 }

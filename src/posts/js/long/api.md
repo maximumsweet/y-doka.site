@@ -2,9 +2,12 @@
 title: "API. Что это и зачем нужно?"
 name: api
 author: bespoyasov
-co-authors:
-designers:
 contributors:
+  - furtivite
+tags:
+  - sprint-10
+  - sprint-12
+  - sprint-14
 summary:
   - апи
   - запросы
@@ -12,6 +15,8 @@ summary:
   - rest
   - soap
   - rpc
+cover:
+  desktop: '/assets/images/posts/js/api/cover.png'
 ---
 
 ## Кратко

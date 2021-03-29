@@ -6,6 +6,10 @@ co-authors:
   - ABatickaya
 designers:
 contributors: skorobaeus
+tags:
+  - sprint-2
+  - sprint-4
+  - sprint-6
 summary:
   - form
   - <form>
